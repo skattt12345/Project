@@ -1,0 +1,284 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixin.scss";
+//</МИКСИНЫ>===============================================================================================
+
+
+//<Подключаем шрифты>=======================================================================================
+
+// @import url"https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap";
+
+//</Подключаем шрифты>=======================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily:"";
+//</Шрифт по умолчанию>==========================================================================================
+
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+@import "var.scss";
+
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "reset.scss";
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper{width: 100%;min-height: 100%;overflow: hidden;}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container{
+	max-width:$mw+px;
+	margin: 0 auto;
+	width: 100%;
+	@media (max-width:$md1+px){
+		max-width: 970px;
+	}
+	@media (max-width:$md2+px){
+		max-width: 750px;
+	}
+	@media (max-width:$md3+px){
+		max-width: none;padding:0 10px;
+	}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+// Подключение стилей для хедера
+@import "header.scss";
+// =================================================================================================================
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.preview {
+	background-image: url(../image/header/bg.jpg);
+	height: 740px;
+	background-repeat: no-repeat;
+	white-space: nowrap;
+	background-size: cover;
+}
+.header {
+	/* .header__row */
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+	/* .header__right */
+	&__left {
+		margin-top: 20px;
+	}
+}
+
+.header-menu-burger {
+	margin-top: 30px;
+}
+
+//====================================================================================================
+.preview {
+	/* .preview__text */
+	&__text {
+		margin: 190px 0 230px 0;
+	}
+}
+.text {
+	display: flex;
+    flex-direction: column;
+    white-space: normal;
+    width: 730px;
+    margin: 190px auto 230px auto;
+	/* .text__title */
+	&__title {
+		font-family: "Oswald";
+		font-weight: 500;
+		font-size: 64px;
+		line-height: 95px;
+		text-align: center;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		color: #FFFFFF;
+		margin-bottom: 35px;
+
+
+	}
+	&__subtitle {
+		font-family: "Oswald";
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 27px;
+		text-align: center;
+		text-transform: uppercase;
+		color: #FFFFFF;
+	}
+}
+
+//====================================================================================================
+
+.year {
+	padding: 57px 0;
+	margin: 0 auto;
+	width: 1110px;
+	background-color: #F7F7F7;
+	transform: translate(0, -50%);
+	/* .year__row */
+	&__row {
+		display: flex;
+		justify-content: center;
+	}
+	/* .year__column */
+	&__column {
+		width: 190px;
+		margin: 0 15px;
+		&:first-child{
+			margin-left: 0px;
+		}
+		&:last-child{
+			margin-right: 0px;
+		}
+		
+	}
+	/* .year__number */
+	&__number {
+		font-family: Oswald;
+		font-weight: 500;
+		font-size: 72px;
+		line-height: 107px;
+		text-align: center;
+		text-transform: uppercase;
+		color: #F7654A;
+	}
+	/* .year__text */
+	&__text {
+		font-family: Oswald;
+		font-weight: 500;
+		font-size: 36px;
+		line-height: 53px;
+		text-align: center;
+		text-transform: uppercase;
+		color: #000000;
+	}
+	/* .year__subtitle */
+	&__subtitle {
+		font-family: Oswald;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 27px;
+		text-align: center;
+		color: #999999;
+	}
+}
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+
+.big-proect {
+	/* .big-proect__title */
+	&__title {
+		font-family: Oswald;
+		font-weight: 500;
+		font-size: 36px;
+		line-height: 53px;
+		text-align: center;
+		text-transform: uppercase;
+		color: #404149;
+		margin-bottom: 60px;
+	}
+	&__row{
+		display: flex;
+		margin: 0 -15px;
+	}
+	&__column {
+		flex: 0 0 33.333%;
+		padding: 0 7.5px;
+
+	}
+}
+
+.proect {
+	/* .proect__image */
+	&__image {
+		margin-bottom: 66px;
+		img{
+			max-width: 100%;
+		}
+	}
+	/* .proect__border */
+	&__border {
+		width: 55px;
+		height: 6px;
+		background: #F7654A;
+		margin-bottom: 15px;
+	}
+	/* .proect__text */
+	&__text {
+		font-family: Oswald;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 36px;
+		color: #404149;
+		margin-bottom: 20px;
+	}
+	/* .proect__subtext */
+	&__subtext {
+		font-family: "Open Sans";
+		font-size: 16px;
+		line-height: 22px;
+		color: #999999;
+	}
+}
+// ====================================================================================================
+
+
+.clever-proect {
+	padding: 40px 0;
+	background-color: #F7654A;
+	/* .clever-proect__row */
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items:center;
+	}
+	/* .clever-proect__column */
+	&__column {
+	}
+	/* .clever-proect__title */
+	&__title {
+		font-family: Oswald;
+		font-weight: bold;
+		font-size: 48px;
+		line-height: 71px;
+		letter-spacing: 0.02em;
+		color: #FFFFFF;
+	}
+	/* .clever-proect__subtitle */
+	&__subtitle {
+		font-family: Oswald;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 36px;
+		letter-spacing: 0.02em;
+		color: #FFFFFF;
+	}
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	/* .btn__list */
+	&__list {
+		font-family: Oswald;
+		font-weight: 500;
+		font-size: 14px;
+		letter-spacing: 0.05em;
+		color: #000000;
+		margin: 0 14px;
+		background-color: #fff;
+		img{
+			margin:3px 0 0 0;
+		}
+
+	}
+}
+
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "forms.scss";
+@import "ui.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
